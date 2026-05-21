@@ -1,0 +1,14 @@
+{
+  "name": "cloud-ai",
+  "version": "1.0.0",
+  "description": "Autonomous Cloud AI platform with injectable AI providers and runtime environments. Supports Anthropic, OpenAI, Google, and custom AI providers running on Docker, GitHub Codespaces, Tripod, and Kubernetes.",
+  "author": {
+    "name": "Cloud AI Team"
+  },
+  "capabilities": {
+    "providers": ["anthropic", "openai", "google", "custom"],
+    "runtimes": ["docker", "github-codespaces", "tripod", "kubernetes"],
+    "autonomy": true,
+    "mcp-integration": true
+  }
+}
