@@ -1,0 +1,73 @@
+{
+  "default_provider": "anthropic",
+  "providers": {
+    "anthropic": {
+      "enabled": true,
+      "api_endpoint": "https://api.anthropic.com/v1",
+      "auth_type": "api_key",
+      "env_var": "ANTHROPIC_API_KEY",
+      "models": {
+        "default": "claude-sonnet-4-5-20250929",
+        "available": [
+          "claude-sonnet-4-5-20250929",
+          "claude-opus-4-5-20250929",
+          "claude-3-5-sonnet-20241022",
+          "claude-3-5-haiku-20241022"
+        ]
+      }
+    },
+    "openai": {
+      "enabled": false,
+      "api_endpoint": "https://api.openai.com/v1",
+      "auth_type": "api_key",
+      "env_var": "OPENAI_API_KEY",
+      "models": {
+        "default": "gpt-4o",
+        "available": [
+          "gpt-4o",
+          "gpt-4-turbo",
+          "gpt-3.5-turbo",
+          "o1-preview",
+          "o1-mini"
+        ]
+      }
+    },
+    "google": {
+      "enabled": false,
+      "api_endpoint": "https://generativelanguage.googleapis.com/v1beta",
+      "auth_type": "api_key",
+      "env_var": "GOOGLE_API_KEY",
+      "models": {
+        "default": "gemini-1.5-pro",
+        "available": [
+          "gemini-1.5-pro",
+          "gemini-1.5-flash",
+          "gemini-1.0-pro"
+        ]
+      }
+    },
+    "custom": {
+      "enabled": false,
+      "api_endpoint": "",
+      "auth_type": "api_key",
+      "env_var": "CUSTOM_AI_API_KEY",
+      "auth_header": "Authorization",
+      "auth_prefix": "Bearer",
+      "models": {
+        "default": "",
+        "available": []
+      }
+    }
+  },
+  "runtime": {
+    "default": "docker",
+    "environment_variables": [],
+    "persistent_storage": true
+  },
+  "autonomy": {
+    "max_iterations": 0,
+    "completion_promise_required": false,
+    "state_persistence": true,
+    "loop_timeout_minutes": 0
+  }
+}
